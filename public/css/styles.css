@@ -30,12 +30,12 @@
   text-align: right;
 }
 
-#tools a{
+#tools a {
   text-decoration: none;
   color: black;
 }
 
-.header-section{
+nav ul {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -44,7 +44,7 @@
   padding: 20px 10px  ;
 }
 
-.header-section li a {
+nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
@@ -213,12 +213,8 @@
     font-size: 1.4rem;
   }
 
-  .header-section li a {
+  nav ul li a {
     font-size: 1.8rem;
-  }
-
-  ul.header-section {
-    padding: 20px 70px;
   }
 
   /* -------Body------ */
