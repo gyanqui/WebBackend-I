@@ -187,7 +187,12 @@ nav ul li a {
   padding: 5px 45px;
 }
 
-/* class pages */
+/* --------Footer------- */
+.footer-text {
+  padding: 20px 0;
+}
+
+/* SUB PAGE CLASSIFICATION */
 #inv-display {
   display: grid;
   gap: 1em;
@@ -198,12 +203,9 @@ nav ul li a {
 }
 
 #inv-display li img {
-  /* height: 100%; */
   max-height: 50%;
 }
 #inv-display li {
-  /* height: 100%; */
-  /* width: 100%; */
   max-width: 25em;
   background-color: black;
   color: white;
@@ -218,9 +220,17 @@ nav ul li a {
   margin: 1rem;
 }
 
-/* --------Footer------- */
-.footer-text {
-  padding: 20px 0;
+/* SUB PAGE CAR DETAILS */
+
+#product-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  padding: 0 1rem;
+  line-height: 2rem;
 }
 
 @media only screen and (min-width: 1300px) {
