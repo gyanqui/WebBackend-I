@@ -197,7 +197,6 @@ nav ul li a {
   display: grid;
   gap: 1em;
   list-style: none;
-  /* padding: 0; */
   padding: 1em;
   justify-content: center;
 }
@@ -351,5 +350,19 @@ nav ul li a {
   }
   #inv-display li {
     width: 25em;
+  }
+
+
+  #product-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  #inv-display li {
+    width: 25em;
+  }
+
+  .details {
+    padding: 3rem;
   }
 }
