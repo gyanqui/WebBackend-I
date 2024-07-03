@@ -41,7 +41,7 @@ nav ul {
   flex-direction: row;
   list-style: none;
   background-color: black;
-  padding: 20px 10px  ;
+  padding: 20px 10px;
 }
 
 nav ul li a {
@@ -189,7 +189,7 @@ nav ul li a {
 
 /* --------Footer------- */
 .footer-text {
-  padding: 20px 0;
+  padding: 20px;
 }
 
 /* SUB PAGE CLASSIFICATION */
@@ -232,6 +232,61 @@ nav ul li a {
   line-height: 2rem;
 }
 
+
+/* Log in Page */
+
+form#loginForm {
+  background-color: aqua;
+  padding: 20px;
+  font-size: 1rem;
+  /* line-height: 1.5rem; */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+
+.data-box {
+border: 3px solid white;
+padding: 10px;
+border-radius: 10px;
+}
+
+.data-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.data-box label span {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 0.9rem;
+}
+
+#loginForm button, #registerForm button {
+  font-size: 1rem;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+#registerForm {
+  background-color: aqua;
+  padding: 20px;
+  margin: 10px;
+}
+
+.flash-message {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+#registerForm button {
+  font-size: 1rem;
+  padding: 5px;
+}
+
 @media only screen and (min-width: 1300px) {
   html {
     padding: 20px 70px;
@@ -251,6 +306,10 @@ nav ul li a {
 
   #tools {
     font-size: 1.4rem;
+  }
+
+  nav ul {
+    padding: 20px 50px;
   }
 
   nav ul li a {
@@ -365,4 +424,38 @@ nav ul li a {
   .details {
     padding: 3rem;
   }
+
+  
+  /******** Log in Page ********/
+
+  form#loginForm{
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin: 0 400px;
+  }
+
+  .data-box label span {
+    font-size: 1.2rem;
+  }
+
+  #loginForm button, #registerForm button {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  #registerForm {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    margin: 0 400px;
+  }
+
+  #registerForm button {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  ul.notice li {
+    font-size: 1.5rem;
+  }
+
 }
