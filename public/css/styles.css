@@ -240,7 +240,7 @@ nav ul li a {
 
 /* Log in Page */
 
-form#loginForm {
+form#loginForm, form#registerForm, form#updateForm {
   background-color: aqua;
   padding: 20px;
   font-size: 1rem;
@@ -267,7 +267,7 @@ border-radius: 10px;
   font-size: 0.9rem;
 }
 
-#loginForm button, #registerForm button {
+#loginForm button, #registerForm button , #updateForm button {
   font-size: 1rem;
   padding: 5px;
   margin: 10px 0;
@@ -447,7 +447,7 @@ border-radius: 10px;
   
   /******** Log in Page ********/
 
-  form#loginForm{
+  form#loginForm, form#registerForm button, form#updateForm{
     font-size: 1.5rem;
     line-height: 2.3rem;
     margin: 0 400px;
@@ -457,7 +457,7 @@ border-radius: 10px;
     font-size: 1.2rem;
   }
 
-  #loginForm button, #registerForm button {
+  #loginForm button, #registerForm button, #updateForm button {
     font-size: 1.2rem;
     margin: 10px 0;
   }

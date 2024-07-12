@@ -25,7 +25,6 @@ async function checkExistingEmail(account_email){
     }
   }
   
-  
   /* *****************************
   * Return account data using email address
   * ***************************** */
@@ -40,7 +39,9 @@ async function checkExistingEmail(account_email){
     }
   }
   
-  
+
+
+// THIS IS NEWWWWWWWW CODE 
   /* *****************************
   * Return account data using account id
   * ***************************** */
