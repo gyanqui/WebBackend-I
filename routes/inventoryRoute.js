@@ -29,21 +29,25 @@ router.post('/add-inventory',
 
 
 // Route to build inventory by classification view for management view
-router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON));
+router.get("/getInventory/:classification_id", 
+    utilities.handleErrors(invController.getInventoryJSON));
 
-// Route to edit inventory
-router.get("/edit/:inventory_id", utilities.handleErrors(invController.buildEditIventory));
+// Route to Update inventory
+router.get("/edit/:inventory_id", 
+    utilities.handleErrors(invController.buildEditIventory));
+
+// Route to process Update inventory
+router.post("/update/", 
+    validate.newInventoryRules(),
+    validate.checkUpdateData,
+    utilities.handleErrors(invController.updateInventory));
 
 // Route to delete inventory
-// router.get("/delete/:inventory_id", utilities.checkAccountType, utilities.handleErrors(invController.buildDeleteInv));
+router.get("/delete/:inventory_id", 
+    utilities.handleErrors(invController.buildDeleteInv));
 
 // Route to process delete inventory
-// router.post("/delete/", utilities.handleErrors(invController.processDeleteInventory));
-
-// Route to process update inventory
-router.post("/update/", 
-validate.newInventoryRules(),
-validate.checkUpdateData,
-utilities.handleErrors(invController.updateInventory));
+router.post("/delete/", 
+    utilities.handleErrors(invController.processDeleteInventory));
 
 module.exports = router;

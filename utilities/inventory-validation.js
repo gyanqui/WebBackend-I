@@ -111,7 +111,7 @@ validate.checkInventoryData = async (req, res, next) => {
   errors = validationResult(req)
   if (!errors.isEmpty()) {
     let nav = await utilities.getNav()
-    const dropdown = await utilities.buildClassificationDropdown()
+    const dropdown = await utilities.buildDropDownForm()
     res.render("inventory/add-inventory", {
       errors,
       title: "Add Inventory",
@@ -223,7 +223,7 @@ validate.checkUpdateData = async (req, res, next) => {
   errors = validationResult(req)
   if (!errors.isEmpty()) {
     let nav = await utilities.getNav()
-    const classificationSelect = await utilities.buildClassificationDropdown()
+    const classificationSelect = await utilities.buildDropDownForm()
     res.render("inventory/edit-inventory", {
       errors,
       title: "Edit " + title,
