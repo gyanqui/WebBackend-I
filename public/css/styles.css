@@ -33,11 +33,25 @@ ul.notice {
 #tools {
   font-size: 1rem;
   text-align: right;
+  padding: 0 10px;
 }
 
 #tools a {
   text-decoration: none;
   color: black;
+}
+
+div.accountManagement {
+  padding: 0 10px;
+}
+
+div.accountManagement h2, div.accountManagement h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+
+div.accountManagement p {
+  padding: 5px 0;
 }
 
 nav ul {
@@ -240,7 +254,7 @@ nav ul li a {
 
 /* Log in Page */
 
-form#loginForm, form#registerForm, form#updateForm, form#deleteForm{
+form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
   background-color: aqua;
   padding: 20px;
   font-size: 1rem;
@@ -267,24 +281,18 @@ border-radius: 10px;
   font-size: 0.9rem;
 }
 
-#loginForm button, #registerForm button , #updateForm button, #deleteForm button {
+#loginForm button, #registerForm button, #deleteForm button, #updateForm button {
   font-size: 1rem;
   padding: 5px;
   margin: 10px 0;
 }
 
-#registerForm {
+#updateAccountForm button , #updateAccountForm2 button {
   background-color: aqua;
-  padding: 20px;
-  margin: 10px;
-}
-
-/* .flash-message {
-  text-align: center;
   color: black;
-  padding: 10px;
-  font-size: 1.1rem;
-} */
+  padding: 5px;
+  margin: 0 10px;
+}
 
 .deleteMessage, .registerMessage, .classificationMessage {
   text-align: center;
@@ -302,6 +310,20 @@ border-radius: 10px;
   margin: 0 20px;
 }
 
+.manageInv {
+  padding: 10px;
+  display: block;
+  margin: 0 20px;
+  line-height: 30px;
+}
+
+.pwMessage {
+  padding: 10px 0;
+}
+
+#inv_description {
+  padding-bottom: 40px;
+}
 
 @media only screen and (min-width: 1300px) {
   html {
@@ -453,7 +475,7 @@ border-radius: 10px;
   
   /******** Log in Page ********/
 
-  form#loginForm, form#registerForm, form#updateForm, form#deleteForm{
+  form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
     font-size: 1.5rem;
     line-height: 2.3rem;
     margin: 0 400px;
@@ -463,18 +485,7 @@ border-radius: 10px;
     font-size: 1.2rem;
   }
 
-  #loginForm button, #registerForm button, #updateForm button, #deleteForm button {
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-
-  #registerForm {
-    font-size: 1.5rem;
-    line-height: 2.3rem;
-    margin: 0 400px;
-  }
-
-  #registerForm button {
+  #loginForm button, #registerForm butto, #deleteForm button, #updateForm button {
     font-size: 1.2rem;
     margin: 10px 0;
   }
@@ -486,6 +497,36 @@ border-radius: 10px;
   /* Management Page */
   .button-add {
     font-size: 1.4rem;
+  }
+
+  .manageInv {
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
+
+  div.manageInv h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Account management View */
+  div.accountManagement {
+    padding: 0 20px;
+  }
+  
+  div.accountManagement h2, div.accountManagement h3 {
+    font-size: 1.8rem;
+  }
+  
+  div.accountManagement p {
+    font-size: 1.5rem;
+  }
+  
+  form#updateAccountForm , form#updateAccountForm2 {
+    font-size: 1.4rem;
+  }
+  
+  .updateTitle {
+    font-size: 1.6rem;
   }
 
 }
