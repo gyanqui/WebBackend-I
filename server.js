@@ -17,6 +17,7 @@ const session = require("express-session")
 const pool = require('./database/')
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
+const messageRoute = require("./routes/messageRoute")
 
 const app = express()
 
@@ -67,6 +68,9 @@ app.get("/", Util.handleErrors(baseController.buildHome))
 app.use("/inv", inventoryRoute)
 // Account routes
 app.use("/account", Util.handleErrors(accountRoute)) // Account routes
+
+// inbox route
+app.use("/inbox", messageRoute)
 
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {

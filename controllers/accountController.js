@@ -1,5 +1,6 @@
 const utilities = require("../utilities/")
 const accountModel = require("../models/account-model")
+const messageModel = require("../models/message-model")
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 require("dotenv").config()
@@ -12,6 +13,7 @@ async function buildLogin(req, res, next) {
     res.render("account/login", {
       title: "Login",
       nav,
+      errors: null,
     })
   }
 
@@ -29,15 +31,20 @@ async function buildRegister(req, res, next) {
 
 /* ****************************************
 *  Deliver management view
+*  (Assignment 6)
 * *************************************** */
 async function buildManagement(req, res, next) {
   let nav = await utilities.getNav()
+  let unreadMessages = await messageModel.getUnreadMessageCountByAccountId(res.locals.accountData.account_id)
+
   res.render("./account/account_management", {
     title: "Account Management",
     nav,
     errors: null,
+    unreadMessages
   })
 }
+
 
 /* ****************************************
 *  Process Registration
@@ -159,7 +166,7 @@ async function processAccountUpdate(req,res,next) {
     res.redirect("/account/")
   } else {
     req.flash("notice", "Sorry, the update failed.")
-    res.status(501).render("account/account-management", {
+    res.status(501).render("account/account_management", {
     title: "Account Management",
     nav,
     errors: null,
@@ -188,7 +195,7 @@ async function processPasswordUpdate(req,res,next) {
     } catch (error) {
       console.log("Error occurred")
       req.flash("notice", 'Sorry, there was an error processing the update.')
-      res.status(500).render("account/account-management", {
+      res.status(500).render("account/account_management", {
         title: "Account Management",
         nav,
         errors: null,
@@ -207,7 +214,7 @@ async function processPasswordUpdate(req,res,next) {
   } else {
     console.log("Fail")
     req.flash("notice", "Sorry, the update failed.")
-    res.status(501).render("account-management", {
+    res.status(501).render("account_management", {
     title: "Account Management",
     nav,
     errors: null,
@@ -230,5 +237,6 @@ async function buildLogoutView(req,res,next) {
 async function processLogout(req,res,next) {
   return res.redirect("../../")
 }
+
 
 module.exports = { buildLogin, buildRegister, registerAccount, logToAccount, buildManagement, buildAccountUpdate, processAccountUpdate, processPasswordUpdate, buildLogoutView, processLogout }
